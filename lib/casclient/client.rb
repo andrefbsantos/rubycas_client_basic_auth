@@ -274,7 +274,6 @@ module CASClient
         log.debug "CAS server responded with #{raw_res.inspect}:\n#{raw_res.body}"
       else
         log.error "CAS server responded with an error! (#{raw_res.inspect})"
-        binding.pry
         raise "The CAS authentication server at #{uri} responded with an error (#{raw_res.inspect})!"
       end
 
